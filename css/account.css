@@ -1,0 +1,142 @@
+/* acount contnet start */
+#account .account_content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65% 32%;
+    grid-template-rows: min-content;
+    padding: 50px 0 60px;
+    border-top: 1px solid var(--gray);
+    grid-gap: 35px;
+}
+/* left side css start */
+#account .account_content .left_side{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+/* list heading css start */
+#account .account_content .left_side .list_heading{
+    padding: 50px 40px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 300;
+}
+/* list content css start */
+.account_content .left_side .list{
+    display: flex;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    margin-bottom: 40px;
+}
+.account_content .left_side .list .list_content,.account_content .left_side .list .fee{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+    color: var(--gray);
+    
+ 
+}
+.account_content .left_side .list b{
+    font-size: .8rem;
+    font-weight: 300;
+}
+.account_content .left_side .list .bold{
+    font-weight: 500;
+}
+.account_content .left_side .list .badge{
+    padding: 3px 5px;
+    font-weight: 500;
+    color: #fff;
+    background: #3E884F;
+    border-radius: 5px;
+    font-size: .7rem;
+}
+/* fee box css */
+.account_content .left_side .list .fee{
+    flex-basis: 40%;
+}
+.account_content .left_side .list .fee .fee_row{
+    width: 100%;
+    border-top: 1px solid #F3F3F3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.account_content .left_side .list .invoice{
+    flex-basis: 10%;
+    padding: 7px 5px;
+    background: var(--darkBlue);
+    color: var(--white);
+    border-radius: 25px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: .7rem;
+    font-weight: 400;
+}
+.account_content .left_side .list .invoice:hover{
+    background: var(--darkBlue);
+}
+.account_content .left_side .list .download{
+    flex-basis: 8%;
+    padding: 10px;
+    background: #05a129;
+    color: var(--white);
+    border-radius: 2px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all linear .2s;
+}
+.account_content .left_side .list .download:hover{
+    background: #3E884F;
+}
+/* right side css start */
+.account_content .right_side{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    align-content: flex-start;
+    grid-gap: 25px;
+
+}
+.account_content .right_side .content_box, .account_content .right_side .notice{
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 8px;
+    color: var(--gray);
+}
+.account_content .right_side .content_box h3{
+    font-size: .8rem;
+    font-weight: 400;
+}
+.account_content .right_side .content_box span{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.account_content .right_side .notice{
+    grid-area: 3/1/ 4/-1;
+    align-items: flex-start;
+}
+.account_content .right_side .notice h4{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px 0;
+}
+/* right side css end */

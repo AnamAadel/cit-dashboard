@@ -1,0 +1,49 @@
+
+#batch .dash_content{
+    width: 100%;
+    grid-template-columns: repeat(3,minmax(150px,365px));
+}
+.service_card{
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.service_card .serv_title{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    color: var(--gray);
+}
+.service_card .serv_content{
+    background: var(--white);
+}
+.service_card .serv_item{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 2px;
+    border-top: 1px solid var(--gray);
+    gap: 5px;
+    cursor: pointer;
+}
+.service_card .serv_item h5{
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--gray);
+    text-transform: capitalize;
+    margin-right: auto;
+}
+.service_card .serv_item .badge{
+    font-size: .6rem;
+    font-weight: 400;
+    background: var(--darkBlue);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.service_card .serv_item .badge:nth-child(3){
+    background: #3E884F;
+}

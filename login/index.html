@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative IT Institute</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="login_page">
+        <div class="background">
+            <img src="../images/balloon.jpg" alt="">
+        </div>
+        <!------------------ login card start here ---------------->
+        <div class="login_card">
+            <div class="img-side">
+                <h2>Student Login Form</h2>
+                <p>Please use your credentials to login</p>
+                <p>Password: 123456</p>
+            </div>
+            <div class="login-side wdl_color">
+                <a href="#" class="logo"><img  src="../images/logo.png" alt="logo"></a>
+                <h4>Login</h4>
+                <form action="../dashboard.html" name="myform" onsubmit="return validateForm()" method="post">
+                    <label id="email">
+                        <input type="email" name="email" >
+                        <span class="wdl_color error email">E-mail</span>
+                    </label>
+                    <label id="pass">
+                        <input type="password" name="password" > 
+                        <span class="wdl_color error pass">Password</span>
+                    </label>
+                    <div class="form-bottom ">
+                        <a href="">I have no account.</a>
+                        <button class="d_bg" type="submit">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!------------------ login card end here ---------------->
+        <!------------------ theme colors box strt here ---------------->
+        <div class="theme_colors wdl_color">
+            <a href="#" class="theme-button wdl_color d_color"><i class="fas fa-magic"></i></a>
+            <div class="light_theme">
+                <h5>Light Theme</h5>
+                <div class="color-box">
+                    <a href="#" class="theme_color blue" data-color="#145388"><span class="bg active"></span></a>
+                    <a href="#" class="theme_color purple" data-color="#922C88"><span class="bg"></span></a>
+                    <a href="#" class="theme_color green" data-color="#8B9879"><span class="bg"></span></a>
+                    <a href="#" class="theme_color orange" data-color="#EBAC78"><span class="bg"></span></a>
+                    <a href="#" class="theme_color red" data-color="#AD5665"><span class="bg"></span></a>
+                </div>
+                
+            </div>
+            <div class="dark_theme">
+                <h5>Dark Theme</h5>
+                <div class="color-box">
+                    <a href="#" class="theme_color blue" data-color="#145388"><span class="bg"></span></a>
+                    <a href="#" class="theme_color purple" data-color="#922C88"><span class="bg"></span></a>
+                    <a href="#" class="theme_color green" data-color="#8B9879"><span class="bg"></span></a>
+                    <a href="#" class="theme_color orange" data-color="#EBAC78"><span class="bg"></span></a>
+                    <a href="#" class="theme_color red" data-color="#AD5665"><span class="bg"></span></a>
+                </div>
+            </div>
+            <div class="border_radius">
+                <h5>Border Radius</h5>
+                <div class="radio_buttons">
+                    <div class="round_value">
+                        <span class="radio d_bg round active"><span class="wdl_color"></span></span>
+                        <a href="#" for="rounded">Rounded</a>
+                    </div>
+                    <div class="flat_value">
+                        <span class="radio d_bg flat"><span class="wdl_color"></span></span>
+                        <a href="#" for="flat">Flat</a>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="direction">
+                <h5>Direction</h5>
+                <div class="radio_buttons">
+                    <div class="ltr_value">
+                        <span class="radio ltr d_bg show"><span class="wdl_color"></span></span>
+                        <a href="#" class="ltr_value" for="ltr">Ltr</a>
+                    </div>
+    
+                    <div class="rtl_value">
+                        <span class="radio rtl d_bg"><span class="wdl_color"></span></span>
+                        <a href="#" for="rtl">Rtl</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!------------------ theme colors box end here ---------------->
+
+    </div>
+
+    <script src="../index.js"></script>
+    <script src="../dashboard/dashboard.js"></script>
+</body>
+</html>

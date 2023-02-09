@@ -1,0 +1,219 @@
+/******************  start ***************/
+.title{
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--gray);
+    padding: 20px 0;
+    color: #3A3A3A;
+}
+.batch_title{
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gray);
+    color: var(--gray);
+}
+.batch_title .batch_btn{
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--darkGray);
+    cursor: pointer;
+}
+.batch_title .batch_btn span{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background: transparent;
+}
+.batch_title .batch_btn span.active{
+    background: var(--darkGray);
+}
+.dash_content{
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(150px,365px));
+    grid-template-rows: min-content;
+    padding: 15px 0 30px;
+    gap: 30px;
+}
+/*************  card one css start **********/
+.dash_content .card_one{
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/************** card title ***************/
+.dash_content .card_one .card_title{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.dash_content .card_one .card_title h4{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-right: auto;
+    color: var(--gray);
+}
+.dash_content .card_one .card_title .badge{
+    font-size: .7rem;
+    font-weight: 400;
+    background: #3E884F;
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    padding-bottom: 8px;
+}
+/************** card progress content start**************/
+.dash_content .card_one .class{
+    width: 100%;
+}
+.dash_content .card_one .class p{
+    font-size: .7rem;
+    font-weight: 400;
+    color: var(--gray);
+    text-transform: capitalize;
+}
+.dash_content .card_one .class .progress{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.dash_content .card_one .class .progress .progress_bar{
+    flex-basis: 95%;
+    height: 3px;
+    background: var(--lightGray);
+    border-radius: 5px;
+}
+.dash_content .card_one .progress .progress_bar span{
+    height: 100%;
+    background: var(--blue);
+    border-radius: 5px;
+    display: block;
+}
+.dash_content .card_one .progress.module .progress_bar span{
+    width: 65%;
+}
+.dash_content .card_one .progress.present .progress_bar span{
+    width: 97%;
+}
+.dash_content .card_one .progress.absent .progress_bar span{
+    width: 3%;
+}
+.dash_content .card_one .progress.submit .progress_bar span{
+    width: 91%;
+}
+.dash_content .card_one .progress .persentage{
+    font-size: .8rem;
+    font-weight: 100;
+    color: var(--lightBlack);
+}
+/************** card progress content end**************/
+/***************** class schedule ************/
+.dash_content .card_one .schedule{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.dash_content .card_one .schedule h4{
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--darkGray);
+}
+.dash_content .card_one .schedule h4 span{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--darkGray);
+}
+.dash_content .card_one .schedule .badge{
+    padding: 5px 10px;
+    background: #145388;
+    color: var(--white);
+    font-size: .5rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+/*  card one css end */
+/*  card two css start */
+.card_two{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,110px);
+    grid-gap: 30px;
+
+}
+.card_two .card_box{
+    flex-basis: 160px;
+    background:  #1e79c4;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+ .card_two .card_box::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(24deg,rgba(0,0,0,.3)10%,rgba(0,0,0,.0) 100%);
+    z-index: -1;
+    opacity: 1;
+    transition: all linear .2s;
+}
+ .card_two .card_box:hover::before{
+    opacity: 0;
+}
+ .card_two .card_box h4{
+    font-size: .8rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.card_two .card_box h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+/*  card two css end */
+/* footer css start */
+footer{
+    padding: 40px 40px 40px 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+footer h5{
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--lightBlack);
+}
+footer h5:last-child{
+    color: #145388;
+}
+/* footer css end */
+
+    /******************  end ***************/

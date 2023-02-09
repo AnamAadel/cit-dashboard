@@ -1,0 +1,324 @@
+/* student profile start here */
+.student_profile{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.student_profile .student_imag{
+    flex-basis: 160px;
+    aspect-ratio: 1/1;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.student_profile .student_imag img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.student_profile .student_imag .add{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: .7rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: grid;
+    place-items: center;
+    transition: all linear .2s;
+}
+.student_profile .student_imag .add:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+.student_profile .student_text div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray);
+    margin-bottom: 8px;
+
+}
+.student_profile .student_text div h3{
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+.student_profile .student_text div a{
+    font-size: .9rem;
+}
+.student_profile .student_text .social_btn{
+    padding: 5px 8px;
+    border: 1px dashed var(--gray);
+    align-self: flex-start;
+    transition: all linear .2s;
+}
+.student_profile .student_text .social_btn:hover{
+    border: 1px dashed var(--blue);
+    color: var(--blue);
+}
+/* student profile end here */
+/* student adress start here */
+.stud_adress{
+    width: 100%;
+    padding: 45px 30px 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28%,1fr));
+    background: var(--white);
+    margin-top: 40px;
+    grid-gap: 10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    
+}
+/* student update start */
+.stud_adress .last_update{
+    font-size: .6rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--darkGray);
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: 1px solid var(--darkGray);
+}
+.last_update span{
+    color: #EB449D;
+    font-weight: 300;
+    font-size: .5rem;
+}
+/* student update end */
+/* student top area start */
+.top_area{
+    grid-area: 1/1/2/-1;
+    display: flex;
+    gap: 10px;
+}
+/* student top area end */
+/* student adress box start */
+.top_area .adress_box{
+    flex-basis: 50%;
+}
+.adress_box{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+/****** input arrow css ********/
+.adress_box a{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    color: gray;
+    transition: all linear .2s;
+}
+/* address box heading */
+.adress_box label,.adress_box h5{
+    font-size: .8rem;
+    font-weight: 400;
+    color: gray;
+}
+/* input selection area start*/
+.adress_box >div{
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 25px 0;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 5px;
+    transform-origin: top;
+    transform: scaleY(.5);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+    
+}
+.adress_box >div div{
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 400;
+    padding: 0 25px;
+}
+/* input focus ,hover effect */
+.adress_box >div div:hover{
+    background: var(--lightGray);
+}
+.adress_box input{
+    border: 1px solid var(--gray);
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: var(--darkGray);
+}
+.adress_box input:hover{
+    border: 1px solid var(--blue);
+}
+.adress_box input:focus{
+    outline: 2px solid #D5E8FC;
+    border: 1px solid var(--blue);
+}
+.adress_box input:focus ~div{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.adress_box input:focus ~a{
+    transform: rotate(180deg);
+}
+.adress_box.present{
+    grid-area: 5/1/6/-1;
+}
+.adress_box.permanent{
+    grid-area: 7/1/8/-1;
+}
+.adress_box textarea{
+    width: 100%;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding: 10px;
+}
+.adress_box textarea:focus{
+    outline: 2px solid #D5E8FC;
+    border: 1px solid var(--blue);
+}
+    /* student adress end here */
+    /* student Education Background start here */
+.EdBackground{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 30px 25px;
+    background: var(--white);
+    margin: 50px 0;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+.back_heading{
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--darkGray);
+}
+.back_heading .badge{
+    background: var(--darkBlue);
+    font-size: .9rem;
+    padding: 10px;
+    color: var(--white);
+}
+.back_content{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.back_content .adress_box{
+    min-width: 50px;
+}
+.back_content .adress_box.select{
+    min-width: 160px;
+}
+.back_content .adress_box >div{
+    top: 0;
+    transform: translateY(-100%) scaleY(.5);
+    transform-origin: bottom;
+}
+.back_content .adress_box input:focus ~div{
+    transform: translateY(-100%) scaleY(1);
+}
+.back_content .side_btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.back_content .side_btn .btn{
+    width: 60px;
+    background: var(--darkBlue);
+    color: #fff;
+    font-size: .8rem;
+    padding: 10px 0;
+    text-align: center;
+}
+.back_content .side_btn .btn:hover,.back_heading .badge:hover{
+    background: var(--blue);
+}
+    /* student Background end here */
+
+    /* password changing css start*/
+#change_pass{
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    
+
+}
+#change_pass form{
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+    box-shadow: var(--box-shadow);
+}
+#change_pass form> div{
+    display: flex;
+    flex-direction: column;
+    color: var(--darkGray);
+    font-size: .8rem;
+    font-weight: 300;
+    gap: 15px;
+}
+#change_pass form> div input{
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+#change_pass form> div input:focus{
+    outline: 1px solid var(--blue);
+    border: 1px solid var(--darkBlue);
+
+}
+#change_pass form button{
+    border: none;
+    padding: 8px 12px;
+    background: var(--darkBlue);
+    color: #fff;
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: .8rem;
+    font-weight: 400;
+}
+    /* password changing css end*/

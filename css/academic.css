@@ -1,0 +1,86 @@
+#academic .acad_menu{
+    width: 300px;
+    height: 87vh;
+    position: fixed;
+    top: 89px;
+    left: -100%;
+    box-shadow: 10px 0px 15px rgb(0 0 0 / 10%);
+    padding: 50px 20px;
+    border-radius:0 20px 20px 0;
+    z-index: 99;
+    background: var(--white);
+    transition: all linear .3s;
+    color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    transition: all linear .4s;
+}
+#academic .acad_menu.collapse{
+    left: 122px;
+}
+#academic .acad_menu .acad_items ,#academic .acad_menu .acad_item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: .8rem;
+    margin-bottom: 20px;
+    
+}
+
+#academic .acad_menu i{
+    font-size: 1.2rem;
+    transition: all linear .3s;
+}
+.acad_menu .acad_item span{
+    color: var(--gray);
+}
+#academic .acad_menu span:hover{
+    
+}
+#academic .acad_menu .acad_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-size: .8rem;
+    padding-left: 28px;
+    flex-shrink: 0;
+    height: 0px;
+    overflow: hidden;
+    /* margin-bottom: 20px; */
+    transition: all linear .3s;
+    
+}
+#academic .acad_menu .acad_box.hieghtAnim1{
+    animation: hieghtAnim1 .4s linear both;
+}
+@keyframes hieghtAnim1 {
+    from{
+        height: 0px;
+        margin-bottom: 0;
+    }
+    to{
+        height: 50px;
+        margin-bottom: 20px;
+    }
+}
+#academic .acad_menu .acad_box.hieghtAnim2{
+    animation: hieghtAnim2 .4s linear both;
+}
+@keyframes hieghtAnim2 {
+    from{
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    to{
+        height: 0px;
+        margin-bottom: 0;
+    }
+}
+#academic .acad_menu .acad_box .box_item{
+    display: flex;
+    gap: 15px;
+}
+#academic .acad_menu .acad_box .box_item span{
+    font-size: 300;
+}

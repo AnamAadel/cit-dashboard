@@ -1,0 +1,67 @@
+/* exam search box css start */
+.search_box{
+    width: 170px;
+    position: relative;
+    margin: 20px 0 10px;
+}
+.search_box input{
+    width: 100%;
+    padding: 3px 15px;
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+
+}
+.search_box input::placeholder{
+    font-size: .7rem;
+    color: var(--lightBlack);
+}
+.search_box a{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: .9rem;
+    color: var(--gray);
+}
+/* exam search box css end */
+/* exam Term & condition button css start */
+.ETC_button{
+    padding: 15px 30px;
+    color: var(--white);
+    font-size: .8rem;
+    font-weight: 500;
+    background: var(--darkBlue);
+    text-transform: capitalize;
+    border-radius: 30px;
+}
+/* exam Term & condition button css end */
+/* exam content css start */
+.exam_content{
+    width: 100%;
+    min-height: 50vh;
+    border-top: 1px solid var(--gray);
+}
+.exam_content .headline_bg{
+    width: 100%;
+    padding: 30px 20px 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    margin-top: 25px;
+
+}
+.exam_content .headline{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    padding: 15px 25px;
+    color: var(--darkGray);
+    font-size: .7rem;
+    font-weight: 700;
+}
+.exam_content .headline div{
+    display: flex;
+    gap: 35px;
+}
+/* exam content css end */

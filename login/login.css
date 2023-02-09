@@ -1,0 +1,354 @@
+.login_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* background css start */
+.background{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+.background img{
+    width: 140%;
+    height: 150%;
+    object-fit: cover;
+}
+/* background css end */
+/***************** login card css start ****************/
+.login_card{
+    width: 960px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    transition: all linear .3s;
+}
+/* login image side css  start*/
+.login_card .img-side{
+    flex-basis: 40%;
+    background: url(../images/login-balloon.jpg) no-repeat center;
+    background-size: cover;
+    padding: 80px 40px;
+    color: var(--white);
+}
+.login_card.dir_change .img-side{
+    order: 2;
+    text-align: right;
+}
+.login_card .img-side h2{
+    font-family: var(--Noto);
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+.login_card .img-side p{
+    font-family: var(--Noto);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1.3rem;
+    
+}
+/* login image side css  end*/
+/* login form side css  start*/
+.login_card .login-side{
+    flex-basis: 60%;
+    padding: 75px 80px;
+    background: var(--white);
+    transition: all linear .3s;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.login_card.dir_change .login-side{
+    order: 1;
+    justify-content: flex-end;
+}
+.login_card .login-side .logo{
+    width: 110px;
+    
+}
+.login_card.dir_change .login-side .logo{
+    align-self: flex-end;
+}
+.login_card .login-side .logo img{
+    width: 100%;
+}
+.login_card .login-side h4{
+    font-family: var(--Noto);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 60px;
+    color: #858585;
+    writing-mode: horizontal-tb;
+}
+.login_card.dir_change .login-side h4{
+    text-align: right;
+}
+.login_card .login-side form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 1.5rem;
+    
+}
+.login_card .login-side form label{
+    position: relative;
+}
+.login_card .login-side form label input{
+    width: 100%;
+    height: 40px;
+    background: #E8F0FE;
+    border: 1px solid #D7D7D7;
+    padding-left: 15px;
+    
+}
+.login_card.dir_change .login-side form label input{
+    direction: rtl;
+}
+.login_card .login-side form label input:focus{
+    outline: 1px solid #0F3D64;
+}
+.login_card .login-side form label span{
+    position: absolute;
+    top: -3px;
+    left: 5px;
+    padding: 0 4px;
+    font-size: 90%;
+    color: #858585;
+    background: var(--white);
+    line-height: .5;
+    transition: all linear .3s;
+}
+.login_card.dir_change .login-side form label span{
+    left: 85%;
+    
+}
+.login_card.dir_change .login-side form input[type=password]+ span{
+    left: 82%;
+}
+.login_card .login-side form .form-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login_card .login-side form .form-bottom a{
+    font-family: var(--Noto);
+    font-size: .9rem;
+    font-weight: 400;
+    color: #858585;
+}
+.login_card.dir_change .login-side form .form-bottom a{
+    order: 2;
+}
+.login_card .login-side form .form-bottom button{
+    padding: 15px 50px;
+    color: var(--white);
+    border: none;
+    background: #0F3D64;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all linear .2s;
+    cursor: pointer;
+}
+.login_card.dir_change .login-side form .form-bottom button{
+    order: 1;
+}
+.login_card .login-side form .form-bottom button:hover{
+    /* background: #175a94; */
+    filter: opacity(0.7);
+}
+/* login form side css  end*/
+/************** login card css end *************/
+/************** theme box css start *************/
+.theme_colors{
+    width: 280px;
+    padding: 35px 20px;
+    background: var(--white);
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.1));
+    position: fixed;
+    top: 50%;
+    right: -280px;
+    transform: translateY(-50%);
+    transition: all linear .3s;
+    z-index: 99999;
+}
+.theme_colors.dir_change{
+    right: 81.5%;
+}
+.theme_colors.moving{
+    right: 0;
+}
+.theme_colors.dir_change.moving{
+    right: 100%;
+
+}
+.theme_colors .theme-button{
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #145388;
+    font-size: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .3s;
+}
+.theme_colors.dir_change .theme-button{
+    left: 100%;
+}
+.theme_colors h5{
+    font-family: var(--Noto);
+    font-size: .9rem;
+    color: #858585;
+    font-weight: 400;
+}
+.theme_colors.dir_change h5{
+    text-align: right;
+}
+.theme_colors .light_theme ,.theme_colors .dark_theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.theme_colors.dir_change .light_theme ,.theme_colors.dir_change .dark_theme{
+    align-items: flex-end;
+}
+.theme_colors .color-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.theme_colors .theme_color{
+    flex-basis: 25px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme_colors .theme_color span.bg{
+    width: 75%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: all linear .2s;
+    opacity: 0;
+    background: #fff;
+
+}
+.theme_colors .theme_color.dark span{
+    background: #232223;
+}
+.theme_colors .theme_color:hover span.bg{
+    opacity: 1;
+}
+.theme_colors .theme_color span.bg.active{
+    opacity: 1;
+}
+.theme_colors .border_radius,.theme_colors .direction{
+    margin-bottom: 30px;
+}
+.theme_colors .radio_buttons{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.theme_colors .radio_buttons a{
+    font-family: var(--Noto);
+    font-size: .8rem;
+    font-weight: 400;
+    color: #858585;
+    position: relative;
+    margin-right: 20px;
+}
+.theme_colors.dir_change .radio_buttons a{
+    margin-right: 0;
+    order: 1;
+}
+.theme_colors .radio_buttons div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.theme_colors.dir_change .radio_buttons div{
+    justify-content: flex-end;
+    margin-right: 0;
+}
+.theme_colors.dir_change .radio_buttons div:first-child{
+    margin-right: -75px;
+}
+.theme_colors .radio_buttons .radio{
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #175a94;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+.theme_colors.dir_change .radio_buttons .radio{
+    order: 2;
+    margin-left: 10px;
+
+}
+.theme_colors .radio_buttons .radio span{
+    width: 70%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 50%;
+}
+.theme_colors .radio_buttons .radio.active span{
+    width: 40%;
+}
+.theme_colors .radio_buttons .radio.show span{
+    width: 40%;
+}
+
+/************** theme box css end *************/
+
+/* media quaris start here */
+
+@media only screen and (max-width:990px){
+    .login_card{
+        max-width: 70%;
+        flex-direction: column;
+        padding-top: 35px;
+
+    }
+    .form-bottom{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .login_card .img-side h2{
+        font-size: 1.5rem;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    .login_card .img-side p{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
