@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
 /* Login css document link */
-@import url(../login/login.css);
+@import url(./login.css);
 /* Dashboard css document link */
 @import url(./dashboard.css);
 /* Batch css document link */
