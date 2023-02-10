@@ -396,50 +396,50 @@ for(item of rtl_value){
 // login form validation
 
 
-function setError(id,error){
-var element = document.getElementById(id);
-element.getElementsByClassName('error')[0].innerHTML = error;
-}
+// function setError(id,error){
+// var element = document.getElementById(id);
+// element.getElementsByClassName('error')[0].innerHTML = error;
+// }
 
 
-function clearForm(){
-    var emailError = document.querySelector('.email');
-    var passError = document.querySelector('.pass');
+// function clearForm(){
+//     var emailError = document.querySelector('.email');
+//     var passError = document.querySelector('.pass');
 
-    emailError.innerHTML = 'E-mail';
-    passError.innerHTML = 'Password';
-}
+//     emailError.innerHTML = 'E-mail';
+//     passError.innerHTML = 'Password';
+// }
 
-function validateForm(){
-    var returnVal = true;
-    var mach_pass = "123456";
+// function validateForm(){
+//     var returnVal = true;
+//     var mach_pass = "123456";
 
-    clearForm();
+//     clearForm();
 
-    var email = document.forms['myform']['email'].value;
+//     var email = document.forms['myform']['email'].value;
 
-    if(email.length < 5){
-        setError('email','The email field is required.');
+//     if(email.length < 5){
+//         setError('email','The email field is required.');
 
-        returnVal = false
-    }
+//         returnVal = false
+//     }
     
-    var pass = document.forms['myform']['password'].value;
+//     var pass = document.forms['myform']['password'].value;
 
-    if(pass.length < 2){
-        setError('pass','The password field is required.');
+//     if(pass.length < 2){
+//         setError('pass','The password field is required.');
 
-        returnVal = false;
-    }
+//         returnVal = false;
+//     }
 
-    if(pass != mach_pass){
-        setError('pass','invalid password.');
+//     if(pass != mach_pass){
+//         setError('pass','invalid password.');
 
-        returnVal = false;
-    }
+//         returnVal = false;
+//     }
 
-    return returnVal;
-}
+//     return returnVal;
+// }
 
 
 //********* */ login page js end
